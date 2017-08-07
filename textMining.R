@@ -25,10 +25,10 @@ docs = tm_map(docs, stemDocument)
 
 #docs = tm_map(docs, stripWhitespace)
 
-dtm <- TermDocumentMatrix(docs)
-m <- as.matrix(dtm)
-v <- sort(rowSums(m),decreasing=TRUE)
-d <- data.frame(word = names(v),freq=v)
+dtm = TermDocumentMatrix(docs)
+m = as.matrix(dtm)
+v = sort(rowSums(m),decreasing=TRUE)
+d = data.frame(word = names(v),freq=v)
 head(d, 10)
 
 library(wordcloud)
